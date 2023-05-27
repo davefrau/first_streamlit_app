@@ -20,6 +20,6 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 
 #New Section to diplay fruityvice api reponse
-streamlit.header('Fruityvice is no N-I-C-E') 
+streamlit.header('Fruityvice is N-I-C-E') 
 fruityvice_response = requests.get("https://www.fruityvice.com/api/fruit/watermelon")
 streamlit.text(fruityvice_response.json())
