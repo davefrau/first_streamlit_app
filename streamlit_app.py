@@ -38,3 +38,7 @@ my_cur.execute("SELECT * from fruit_load_list")
 my_data_rows = my_cur.fetchall()
 streamlit.text("The fruit load list from snowflake containts:")
 streamlit.dataframe(my_data_rows)
+
+#add a second select 
+fruit_added = streamlit.select("Pick a fruit to add:", list(my_data_rows) 
+streamlit.text("Thanks for adding", fruit_added)                               
