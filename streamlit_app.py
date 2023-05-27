@@ -18,9 +18,11 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 #streamlit.dataframe(my_fruit_list)
 streamlit.dataframe(fruits_to_show)
-
 #New Section to diplay fruityvice api reponse
 streamlit.header('Fruityvice is N-I-C-E') 
-fruityvice_response = requests.get("https://www.fruityvice.com/api/fruit/watermelon")
+fruit.choice = streamlit.text_input('What fruit?,'Kiwi')
+streamlit.write('The user entered ', fruit_choice)                       
+#fruityvice_response = requests.get("https://www.fruityvice.com/api/fruit/watermelon")
+fruityvice_response = requests.get("https://www.fruityvice.com/api/fruit/" + fruit_choice)
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 streamlit.dataframe(fruityvice_normalized)
