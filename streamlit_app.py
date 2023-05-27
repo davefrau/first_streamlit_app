@@ -41,4 +41,4 @@ streamlit.dataframe(my_data_rows)
 
 #add a second select 
 my_second_fruit_list = my_data_rows 
-#streamlit.select("Pick a fruit to add:", list(my_data_rows.index),['Plum'])
+streamlit.select("Pick a fruit to add:", list(my_second_fruit_list.index))
