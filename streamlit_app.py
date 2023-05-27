@@ -45,4 +45,4 @@ if add_fruit:
    streamlit.text("You selected: " + add_fruit)
    
 #test adding to sn from streamlit 
-#my_cur.execute("insert into fruit_load_list values ('from streamlit')");
+my_cur.execute("insert into fruit_load_list values ('from streamlit')");
