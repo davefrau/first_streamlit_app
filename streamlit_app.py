@@ -40,9 +40,9 @@ streamlit.text("The fruit load list from snowflake containts:")
 streamlit.dataframe(my_data_rows)
 
 #add a second select 
-add_fruit = streamlit.selectbox ("What Fruit Would you like to add? ", my_data_rows)
+add_fruit = streamlit.text_input ("What Fruit Would you like to add? ")
 if add_fruit:
-   streamlit.text("You selected: " + add_fruit[0])
+   streamlit.text("You selected: " + add_fruit)
    
 #test adding to sn from streamlit 
-insert into fruit_load_list values ('from streamlit');
+#insert into fruit_load_list values ('from streamlit');
