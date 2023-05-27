@@ -20,7 +20,7 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 #New Section to diplay fruityvice api reponse
 streamlit.header('Fruityvice is N-I-C-E') 
-fruit.choice = streamlit.text_input('What fruit?,'Kiwi')
+fruit.choice = streamlit.text_input('What fruit?','Kiwi')
 streamlit.write('The user entered ', fruit_choice)                       
 #fruityvice_response = requests.get("https://www.fruityvice.com/api/fruit/watermelon")
 fruityvice_response = requests.get("https://www.fruityvice.com/api/fruit/" + fruit_choice)
